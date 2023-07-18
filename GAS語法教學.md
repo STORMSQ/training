@@ -1,20 +1,62 @@
-# 1. 創建一個空白試算表
+# 練習1 Javascript基本語法
+
+```javascript
+function myfunction(){
+    var num = 10 //定義一個數字
+    var studentName = '張三' //定義一個學生名稱
+    
+    Logger.log(num)
+    Logger.log(studentName) //分別打印出結果
+    
+    //試著調用其他函數
+    var resultName = numberAddTen(num) //把num這個變量當參數傳進去
+    var resultStudentName =changeStudentNamePrefix(studentName) //把studentName當參數傳進去
+    
+    Logger.log(resultName)
+    Logger.log(resultStudentName)
+}
+
+/**
+ *  數字增加10的方法
+ */
+function numberAddTen(number){
+    return number+10
+}
+
+/**
+ *  學生名稱添加%前綴的方法
+ */
+function changeStudentNamePrefix(student_name)
+{
+    return '%'+student_name
+}
+```
 
 
 
-# 2. 在試算表中填入一些資料
+# 練習2 操作App Script專案 
 
 
 
-# 3. 重新命名工作表
+1. 創建一個空白試算表
 
+2. 在試算表中填入資料
 
+   | 學號       | 姓名 |
+   | ---------- | ---- |
+   | A123456789 | 張三 |
+   | A123456785 | 李四 |
+   | A123456856 | 王五 |
+   | A225314582 | 孫六 |
+   | A125478961 | 錢七 |
 
-# 4. 擴充功能 > App Script
+   
 
+3. 重新命名工作表為student
 
+4. 擴充功能 > App Script
 
-# 5. 開始編寫程式
+5. 開始編寫程式
 
 
 
