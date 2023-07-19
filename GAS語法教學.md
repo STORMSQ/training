@@ -1,4 +1,8 @@
-# 練習1 Javascript基本語法
+# 練習1 語法練習
+
+1. 創建一個空白試算表
+
+2. 擴充功能 > App Script
 
 ```javascript
 function myfunction(){
@@ -48,10 +52,9 @@ function changeStudentNamePrefix(student_name)
    | A123456785 | 李四 |
    | A123456856 | 王五 |
    | A225314582 | 孫六 |
-   | A125478961 | 錢七 |
-
    
-
+   
+   
 3. 重新命名工作表為student
 
 4. 擴充功能 > App Script
@@ -60,7 +63,7 @@ function changeStudentNamePrefix(student_name)
 
 
 
-## 初始化
+## 初始化(設定參數)
 
 ```javascript
 function test1() {
@@ -72,14 +75,14 @@ function test1() {
 
 
 
-## 取值
+## 取得試算表的資料
 
 ```javascript
 function test2() {
   let id ='1zUyFT_UUOnDNGDVtnnQtoxGod5ouIz58YHmd6crFkzc' //試算表ID
   let sheet = SpreadsheetApp.openById(id).getSheetByName('student'); //獲取該試算表下名為student的工作表
 
-  let last = sheet.getLastRow()
+  let last = sheet.getLastRow() //取得最後一筆有資料欄位的索引值(數字)
 
   let result = sheet.getRange("a2:b5").getValues()
 
@@ -89,7 +92,7 @@ function test2() {
 
 ```
 
-## 使用
+## 返回的結果
 
 ```javascript
 function test3() {
@@ -98,7 +101,10 @@ function test3() {
 
   let last = sheet.getLastRow()
 
-  let result = sheet.getRange("a2:b5").getValues()
+  let result_single = sheet.getRange('a2:b5').getValue() //只返回最先一格的資料
+  
+  let result_multi = sheet.getRange("a2:b5").getValues() //返回一個結果陣列，是多筆資料
+  
 
   /**
    * 
