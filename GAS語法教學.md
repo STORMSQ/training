@@ -8,6 +8,7 @@
 function myfunction(){
     var num = 10 //定義一個數字
     var studentName = '張三' //定義一個學生名稱
+    var status = true //定義一個狀態叫做【真】
     
     Logger.log(num)
     Logger.log(studentName) //分別打印出結果
